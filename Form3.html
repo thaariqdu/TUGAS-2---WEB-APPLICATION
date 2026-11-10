@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal Form Lebih Lanjut (Perbaikan)</title>
+</head>
+<body>
+    <form action="Form3.html" method="get">
+        <!-- PERBAIKAN: label terhubung ke select lewat for/id -->
+        <label for="matkul">Pilih Mata kuliah:</label>
+        <select name="matkul" id="matkul" required>
+            <!-- PERBAIKAN: opsi petunjuk (value kosong, tidak bisa dipilih ulang) -->
+            <option value="" disabled selected>-- Pilih mata kuliah --</option>
+            <option value="web1">Pemrograman Web Native</option>
+            <option value="web2">Pemrograman Web Framework</option>
+            <option value="mobile1">Pemrograman Mobile Native</option>
+            <option value="mobile2">Pemrograman Mobile Lintas Platform</option>
+        </select> <!-- PERBAIKAN: tag penutup select -->
+        <p><button type="submit">Kirim</button></p>
+    </form>
+</body>
+</html>

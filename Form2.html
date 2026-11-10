@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal Textarea (Perbaikan)</title>
+    <style>
+        /* PERBAIKAN: teks isian dibuat mudah dibaca (sebelumnya 10px merah) */
+        #alamat {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #222;
+            padding: 8px;
+            border: 1px solid #888;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 420px;
+            box-sizing: border-box;
+        }
+        label { display: block; font-weight: bold; margin-bottom: 4px; }
+        small { display: block; color: #555; margin-top: 4px; }
+    </style>
+</head>
+<body>
+    <!-- PERBAIKAN: action menunjuk file yang ada, ada tombol submit -->
+    <form action="Form2.html" method="get">
+        <label for="alamat">Alamat:</label>
+        <textarea name="alamat" id="alamat" cols="30" rows="6"
+                  maxlength="200" required
+                  placeholder="Tuliskan alamat lengkap..."></textarea>
+        <small>Maksimal 200 karakter. Tekan Enter untuk baris baru.</small>
+        <p><button type="submit">Kirim</button></p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal Form (Perbaikan)</title>
+</head>
+<body>
+    <!-- PERBAIKAN: method=post agar data tidak tampil di URL; semua tag ditutup -->
+    <form action="Form1.html" method="post">
+        <p>Silakan isi data berikut:</p>
+
+        <p>
+            <label for="nama">Nama :</label>
+            <input type="text" id="nama" name="nama" required>
+        </p>
+
+        <p>
+            Jenis Kelamin :
+            <input type="radio" id="lk" name="jenkel" value="Laki-laki" required>
+            <label for="lk">Laki-laki</label>
+            <input type="radio" id="pr" name="jenkel" value="Perempuan">
+            <label for="pr">Perempuan</label>
+        </p>
+
+        <p>
+            <label for="username">Username :</label>
+            <input type="text" id="username" name="username" required autocomplete="username">
+        </p>
+
+        <p>
+            <!-- PERBAIKAN: type=password (disamarkan), name huruf kecil -->
+            <label for="password">Password :</label>
+            <input type="password" id="password" name="password" required minlength="8" autocomplete="new-password">
+        </p>
+
+        <p>
+            Course yang Diikuti :
+            <!-- PERBAIKAN: setiap checkbox diberi value dan label -->
+            <input type="checkbox" id="c1" name="course" value="html"><label for="c1">HTML &amp; CSS</label>
+            <input type="checkbox" id="c2" name="course" value="javascript"><label for="c2">Javascript</label>
+            <input type="checkbox" id="c3" name="course" value="react"><label for="c3">React JS</label>
+            <input type="checkbox" id="c4" name="course" value="node"><label for="c4">Node JS</label>
+        </p>
+
+        <button type="submit" name="submit" value="simpan">Simpan</button>
+    </form>
+</body>
+</html>
